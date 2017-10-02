@@ -3,7 +3,7 @@ A Random Access Protocol for Pilot Allocation in Crowded Massive MIMO Systems
 
 This is a code package is related to the follow scientific article:
 
-Emil Björnson, Elisabeth de Carvalho, Jesper H. Sørensen, Erik G. Larsson, Petar Popovski, “[A Random Access Protocol for Pilot Allocation in Crowded Massive MIMO Systems](http://arxiv.org/pdf/1604.04248),” IEEE Transactions on Wireless Communications, To appear.
+Emil Björnson, Elisabeth de Carvalho, Jesper H. Sørensen, Erik G. Larsson, Petar Popovski, “[A Random Access Protocol for Pilot Allocation in Crowded Massive MIMO Systems](http://arxiv.org/pdf/1604.04248),”  IEEE Transactions on Wireless Communications, vol. 16, no. 4, pp. 2220-2234, April 2017.
 
 The package contains a simulation environment, based on Matlab, that reproduces some of the numerical results and figures in the article. *We encourage you to also perform reproducible research!*
 
