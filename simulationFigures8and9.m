@@ -21,9 +21,9 @@ clear;
 
 
 %Toggle between:
-%FALSE = Adjacent cells are silent (Gives (a) in Figure 8 and 9)
-%TRUE = Adjacent cells cause interference by sending random data (Gives (b) in Figure 8 and 9)
-includeIntercellInterference = true;
+%TRUE = Adjacent cells cause interference by sending random data (Gives (a) in Figure 8 and 9)
+%FALSE = Adjacent cells are silent (Gives (b) in Figure 8 and 9)
+includeIntercellInterference = false;
 
 %Set number of channel models that are considered. The following are added
 %one at a time as the variable is increased
