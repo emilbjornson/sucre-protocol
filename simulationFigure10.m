@@ -7,7 +7,7 @@
 %
 %Download article: http://arxiv.org/pdf/1604.04248
 %
-%This is version 1.0 (Last edited: 2017-02-03)
+%This is version 1.01 (Last edited: 2018-08-28)
 %
 %License: This code is licensed under the GPLv2 license. If you in any way
 %use this code for research that results in publications, please cite our
@@ -121,6 +121,8 @@ interCellVarianceUplink = zeros(1,nbrOfRAblocks);
 
 for j = 1:length(neighboringBSs)
     
+    %Note: 27 dBm represents the transmit power and -98.65 dBm represents
+    %the noise variance
     interCellVarianceUplink = interCellVarianceUplink + sum(rhoIntercell*10.^( (27+ 98.65 - 34.53 - 38*log10(abs(userLocationsNeighboring(:,:,j) + neighboringBSs(j))) + shadowFadingStddB*shadowFadingRealizationsIntercellUplink(:,:,j)  )/10   ),1) ;
     
 end
@@ -215,6 +217,8 @@ for indProb = 1:length(K0values)
             end
             
             %Compute average signal gain for non-line-of-sight propagation
+            %(27 dBm represents the transmit power and -98.65 dBm
+            %represents the noise variance)
             newBetas = 10.^( (27+ 98.65 - 34.53 - 38*log10(newUserDistance) + shadowFadingStddB*newShadowFading  )/10   );
             
             
@@ -226,6 +230,8 @@ for indProb = 1:length(K0values)
             
             for j = 1:length(neighboringBSs)
                 
+                %Note: 27 dBm represents the transmit power and -98.65 dBm
+                %represents the noise variance
                 newIntercellVarianceDownlink = newIntercellVarianceDownlink + qNeighbor*10.^( (27+ 98.65 - 34.53 - 38*log10(abs(newUserLocations-neighboringBSs(j))) + shadowFadingStddB*shadowFadingRealizationsIntercellDownlink(:,j)  )/10   );
                 
             end
