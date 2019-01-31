@@ -7,7 +7,7 @@
 %
 %Download article: http://arxiv.org/pdf/1604.04248
 %
-%This is version 1.01 (Last edited: 2018-08-28)
+%This is version 1.1 (Last edited: 2019-01-31)
 %
 %License: This code is licensed under the GPLv2 license. If you in any way
 %use this code for research that results in publications, please cite our
@@ -372,11 +372,11 @@ for indProb = 1:length(K0values)
                 %waiting times for the failing UEs
                 if method == 1 || method ==2
                     
-                    finalWaitingTimesSUCRe(accessAttempts(giveUp)+1,indProb,method) = finalWaitingTimesSUCRe(accessAttempts(giveUp)+1,indProb,method) + sum(giveUp);
+                    finalWaitingTimesSUCRe(end,indProb,method) = finalWaitingTimesSUCRe(end,indProb,method) + sum(giveUp);
                     
                 elseif method == 3
                     
-                    finalWaitingTimesBaseline(accessAttempts(giveUp)+1,indProb) = finalWaitingTimesBaseline(accessAttempts(giveUp)+1,indProb) + sum(giveUp);
+                    finalWaitingTimesBaseline(end,indProb) = finalWaitingTimesBaseline(end,indProb) + sum(giveUp);
                     
                 end
                 
